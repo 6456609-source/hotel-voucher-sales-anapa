@@ -129,6 +129,10 @@ const HomeFooter = () => {
         className="flex items-center gap-2 rounded-full bg-sky-500 px-4 py-3 text-white shadow-xl hover:bg-sky-600 transition-all hover:scale-105 font-600 text-sm">
         <Icon name="Send" size={20} /> Telegram
       </a>
+      <a href="https://max.ru/u/f9LHodD0cOKR-Q8BTfSOKFFnva1Qwl_xYasvJfTAdU32qbXXsDWu4nZ1OD0" target="_blank" rel="noopener noreferrer"
+        className="flex items-center gap-2 rounded-full bg-purple-600 px-4 py-3 text-white shadow-xl hover:bg-purple-700 transition-all hover:scale-105 font-600 text-sm">
+        <Icon name="MessageSquare" size={20} /> МАКС
+      </a>
       <a href="tel:+79990064045"
         className="flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-accent-foreground shadow-xl hover:bg-accent/90 transition-all hover:scale-105 font-600 text-sm">
         <Icon name="Phone" size={20} /> Позвонить
