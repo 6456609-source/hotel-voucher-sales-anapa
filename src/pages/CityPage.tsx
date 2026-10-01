@@ -20,6 +20,19 @@ const CITY_OVERRIDES: Record<string, { phone: string; phoneRaw: string; whatsapp
   },
 };
 
+const EXTRA_KEYWORDS = (n: string) => [
+  `чеки за проживание ${n}`,
+  `закрывающие документы для командировки ${n}`,
+  `документы для бухгалтерии гостиница ${n}`,
+  `подтверждение проживания в гостинице ${n}`,
+  `гостиничный чек для отчёта ${n}`,
+  `чек из гостиницы для командировочных ${n}`,
+  `оформление командировки ${n}`,
+  `чеки отеля ${n}`,
+  `купить чек за проживание ${n}`,
+  `гостиничные чеки для бухгалтерии ${n}`,
+];
+
 const DEFAULT_CONTACTS = {
   phone: '+7 (999) 006-40-45',
   phoneRaw: '79990064045',
@@ -88,7 +101,7 @@ const CityPage = () => {
       <Helmet>
         <title>{slug && CITY_SEO[slug] ? CITY_SEO[slug].title : `Гостиничные чеки в ${city.caseIn} — купить с подтверждением | ЧекГарант`}</title>
         <meta name="description" content={slug && CITY_SEO[slug] ? CITY_SEO[slug].description : `Купить гостиничные чеки в ${city.caseIn} с подтверждением для авансового отчёта о командировке. Комиссия 10%. Официально, быстро, надёжно. Тел: ${contacts.phone}`} />
-        <meta name="keywords" content={slug && CITY_SEO[slug] ? CITY_SEO[slug].keywords : `гостиничные чеки ${city.name}, купить гостиничные чеки ${city.name}, чеки для командировки ${city.name}, авансовый отчёт ${city.name}`} />
+        <meta name="keywords" content={[slug && CITY_SEO[slug] ? CITY_SEO[slug].keywords : `гостиничные чеки ${city.name}, купить гостиничные чеки ${city.name}, чеки для командировки ${city.name}, авансовый отчёт ${city.name}`, ...EXTRA_KEYWORDS(city.name)].join(', ')} />
         <link rel="canonical" href={`https://chekgarant.online/cities/${city.slug}`} />
       </Helmet>
 
