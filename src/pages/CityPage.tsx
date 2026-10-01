@@ -119,6 +119,8 @@ const CityPage = () => {
     );
   }
 
+  const cityIndex = CITIES.findIndex(c => c.slug === city.slug);
+  const nearbyCities = Array.from({ length: 12 }, (_, i) => CITIES[(cityIndex + 1 + i) % CITIES.length]).filter(c => c.slug !== city.slug);
   const seo = pickSeo(city.slug, city.caseIn, contacts.phone);
   const mapSrc = `https://maps.google.com/maps?q=${city.mapQuery}&output=embed&hl=ru`;
 
@@ -526,6 +528,19 @@ const CityPage = () => {
       </section>
 
       <HomeFaq caseIn={city.caseIn} />
+
+      <section className="py-12">
+        <div className="container">
+          <h2 className="font-display text-xl font-700 uppercase text-primary mb-5">Гостиничные чеки в других городах</h2>
+          <div className="flex flex-wrap gap-2">
+            {nearbyCities.map(c => (
+              <Link key={c.slug} to={`/cities/${c.slug}`} className="rounded border border-border px-3 py-1.5 text-sm text-muted-foreground hover:border-accent hover:text-primary transition-colors">
+                Чеки в {c.caseIn}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-primary py-8 text-primary-foreground">
