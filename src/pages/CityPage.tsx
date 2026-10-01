@@ -33,6 +33,31 @@ const EXTRA_KEYWORDS = (n: string) => [
   `гостиничные чеки для бухгалтерии ${n}`,
 ];
 
+const SEO_VARIANTS = [
+  (c: string, ph: string) => ({
+    title: `Гостиничные чеки в ${c} — купить для командировки и отчёта | ЧекГарант`,
+    description: `Гостиничные чеки в ${c} для командировок и авансового отчёта: чеки за проживание, счёт, договор, QR-код. Проверка документов по email до оплаты. Звоните: ${ph}`,
+  }),
+  (c: string, ph: string) => ({
+    title: `Чеки за проживание в ${c} для бухгалтерии — оформим быстро | ЧекГарант`,
+    description: `Нужны документы о проживании в ${c}? Подготовим гостиничные чеки с QR-кодом для бухгалтерии и закрытия командировки. Сначала проверка на email, потом оплата. Телефон: ${ph}`,
+  }),
+  (c: string, ph: string) => ({
+    title: `Закрывающие документы для командировки в ${c} — гостиничные чеки | ЧекГарант`,
+    description: `Закрывающие документы для командировки в ${c}: гостиничный чек, счёт о проживании, договор. Экспресс-доставка оригиналов по России. Консультация бесплатно: ${ph}`,
+  }),
+  (c: string, ph: string) => ({
+    title: `Гостиничный чек в ${c} с подтверждением проживания | ЧекГарант`,
+    description: `Оформим гостиничный чек в ${c} с подтверждением проживания для авансового отчёта. Работаем официально, помогаем на каждом шаге заказа. Позвоните: ${ph}`,
+  }),
+];
+
+const pickSeo = (slug: string, caseIn: string, phone: string) => {
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) >>> 0;
+  return SEO_VARIANTS[h % SEO_VARIANTS.length](caseIn, phone);
+};
+
 const DEFAULT_CONTACTS = {
   phone: '+7 (999) 006-40-45',
   phoneRaw: '79990064045',
@@ -94,13 +119,14 @@ const CityPage = () => {
     );
   }
 
+  const seo = pickSeo(city.slug, city.caseIn, contacts.phone);
   const mapSrc = `https://maps.google.com/maps?q=${city.mapQuery}&output=embed&hl=ru`;
 
   return (
     <div className="min-h-screen bg-background font-sans">
       <Helmet>
-        <title>{`Гостиничные чеки в ${city.caseIn} — купить для командировки и отчёта | ЧекГарант`}</title>
-        <meta name="description" content={`Гостиничные чеки в ${city.caseIn} для командировок и авансового отчёта: чеки за проживание, счёт, договор, QR-код. Проверка документов по email до оплаты. Звоните: ${contacts.phone}`} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
         <meta name="keywords" content={[slug && CITY_SEO[slug] ? CITY_SEO[slug].keywords : `гостиничные чеки ${city.name}, купить гостиничные чеки ${city.name}, чеки для командировки ${city.name}, авансовый отчёт ${city.name}`, ...EXTRA_KEYWORDS(city.name)].join(', ')} />
         <link rel="canonical" href={`https://chekgarant.online/cities/${city.slug}`} />
       </Helmet>
