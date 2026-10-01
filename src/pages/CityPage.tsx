@@ -232,6 +232,21 @@ const CityPage = () => {
               ))}
             </ul>
 
+            <h3 className="font-display text-xl font-700 text-primary pt-2">Кому нужны гостиничные чеки в {city.caseIn}</h3>
+            <p>
+              Чеки за проживание в {city.caseIn} нужны сотрудникам, которые вернулись из командировки и закрывают авансовый отчёт. Без подтверждающих документов бухгалтерия не сможет принять расходы на гостиницу.
+            </p>
+            <ul className="space-y-2 ml-4 list-none">
+              {[`Командированные сотрудники, выезжающие в ${city.caseIn} по работе`, 'Бухгалтеры, которым нужно закрыть авансовый отчёт', 'Руководители и ИП, оформляющие командировки для команды', 'Организации, отправляющие сотрудников на обучение и переговоры'].map(t => (
+                <li key={t} className="flex items-start gap-2">
+                  <Icon name="CheckCircle2" size={16} className="text-accent mt-0.5 shrink-0" />{t}
+                </li>
+              ))}
+            </ul>
+            <p>
+              Вы отправляете заявку, оператор бесплатно консультирует, мы готовим документы и присылаем их на проверку по email. Оплата — только после того, как вы всё проверили.
+            </p>
+
             <div className="rounded-lg border border-accent/30 bg-accent/5 p-6">
               <div className="font-display text-lg font-700 text-primary mb-1">Стоимость</div>
               <div className="text-3xl font-display font-700 text-accent">10% <span className="text-base text-muted-foreground font-400">от суммы чека</span></div>
