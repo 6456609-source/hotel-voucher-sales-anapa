@@ -99,8 +99,8 @@ const CityPage = () => {
   return (
     <div className="min-h-screen bg-background font-sans">
       <Helmet>
-        <title>{slug && CITY_SEO[slug] ? CITY_SEO[slug].title : `Гостиничные чеки в ${city.caseIn} — купить с подтверждением | ЧекГарант`}</title>
-        <meta name="description" content={slug && CITY_SEO[slug] ? CITY_SEO[slug].description : `Купить гостиничные чеки в ${city.caseIn} с подтверждением для авансового отчёта о командировке. Комиссия 10%. Официально, быстро, надёжно. Тел: ${contacts.phone}`} />
+        <title>{`Гостиничные чеки в ${city.caseIn} — купить для командировки и отчёта | ЧекГарант`}</title>
+        <meta name="description" content={`Гостиничные чеки в ${city.caseIn} для командировок и авансового отчёта: чеки за проживание, счёт, договор, QR-код. Проверка документов по email до оплаты. Звоните: ${contacts.phone}`} />
         <meta name="keywords" content={[slug && CITY_SEO[slug] ? CITY_SEO[slug].keywords : `гостиничные чеки ${city.name}, купить гостиничные чеки ${city.name}, чеки для командировки ${city.name}, авансовый отчёт ${city.name}`, ...EXTRA_KEYWORDS(city.name)].join(', ')} />
         <link rel="canonical" href={`https://chekgarant.online/cities/${city.slug}`} />
       </Helmet>
