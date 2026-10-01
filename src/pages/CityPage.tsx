@@ -6,6 +6,7 @@ import { CITY_SEO } from '@/data/citySeo';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
+import HomeFaq from '@/components/home/HomeFaq';
 
 const DEFAULT_HERO_IMG = 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/9c55a72e-8db7-4f0f-9133-153f82ea8a63.jpg';
 
@@ -469,6 +470,8 @@ const CityPage = () => {
           </div>
         </div>
       </section>
+
+      <HomeFaq caseIn={city.caseIn} />
 
       {/* Footer */}
       <footer className="bg-primary py-8 text-primary-foreground">
