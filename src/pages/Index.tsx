@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import HomeHeader from '@/components/home/HomeHeader';
 import HomeCatalog from '@/components/home/HomeCatalog';
 import HomeOrderForm from '@/components/home/HomeOrderForm';
+import HomeFaq from '@/components/home/HomeFaq';
 import HomeFooter from '@/components/home/HomeFooter';
 
 const Index = () => (
@@ -34,6 +35,7 @@ const Index = () => (
     <HomeHeader />
     <HomeCatalog />
     <HomeOrderForm />
+    <HomeFaq />
     <HomeFooter />
   </div>
 );
