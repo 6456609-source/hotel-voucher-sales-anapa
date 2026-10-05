@@ -32,8 +32,14 @@ const CityReviews = ({ city }: CityReviewsProps) => {
           { name: 'Ирина Т.', date: 'Апрель 2026', text: 'Заказала срочно, сделали за час. Все документы оформлены правильно, с печатью. Очень выручили!' },
           { name: 'Алексей Н.', date: 'Май 2026', text: 'Давно искал надёжный сервис для оформления чеков. Нашёл — не разочаровался. Рекомендую коллегам.' },
           { name: 'Светлана Ж.', date: 'Июнь 2026', text: 'Всё прошло гладко: написала в мессенджер, получила чеки, сдала отчёт. Удобно, быстро, без лишних слов.' },
+          { name: 'Виктор Л.', date: 'Июль 2026', text: 'Заказывал чеки для командировки всей бригады. Всё оформили единым пакетом, бухгалтер вопросов не задал. Спасибо!' },
+          { name: 'Марина Б.', date: 'Июль 2026', text: 'Приятно удивила скорость: прислала данные утром, к обеду проверила документы на почте. Оплатила и получила оригиналы.' },
+          { name: 'Павел Г.', date: 'Август 2026', text: 'Работаю с сервисом регулярно. Ни разу не было проблем с авансовым отчётом. Цена честная, сроки соблюдают.' },
+          { name: 'Татьяна Ф.', date: 'Август 2026', text: 'Очень вежливый менеджер, подробно всё объяснил и помог с оформлением. Документы выглядят безупречно.' },
+          { name: 'Роман Е.', date: 'Сентябрь 2026', text: 'Выручили в последний день сдачи отчёта. Сделали быстро, налоговая вопросов не имела. Однозначно рекомендую.' },
+          { name: 'Анна З.', date: 'Сентябрь 2026', text: 'Сначала сомневалась, но мне сперва показали документы на проверку, а оплата была потом. Всё прозрачно и надёжно.' },
         ];
-        const preview = allReviews.slice(0, 4);
+        const preview = allReviews.slice(0, 6);
         return (
           <section className="py-14 border-t border-border">
             <div className="container">
@@ -41,7 +47,7 @@ const CityReviews = ({ city }: CityReviewsProps) => {
                 <span className="font-display text-sm font-600 uppercase tracking-widest text-accent">Отзывы клиентов</span>
                 <h2 className="mt-2 font-display text-3xl font-700 uppercase text-primary">Что говорят о нас в {city.caseIn}</h2>
               </div>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {preview.map((r) => (
                   <div key={r.name} className="rounded-xl border border-border bg-card p-6 shadow-sm flex flex-col gap-3">
                     <div className="flex items-center gap-1">
