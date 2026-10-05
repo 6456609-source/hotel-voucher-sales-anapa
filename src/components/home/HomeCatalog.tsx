@@ -104,8 +104,8 @@ const HomeCatalog = () => {
             <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
               <div className="font-display text-sm font-600 uppercase tracking-wider text-muted-foreground mb-3">Контакты</div>
               <div className="space-y-3 text-sm">
-                <a href="tel:+79990064045" className="flex items-center gap-2 text-primary font-600 hover:text-accent transition-colors">
-                  <Icon name="Phone" size={16} className="text-accent" />+7 (999) 006-40-45
+                <a href="tel:+79184641800" className="flex items-center gap-2 text-primary font-600 hover:text-accent transition-colors">
+                  <Icon name="Phone" size={16} className="text-accent" />+7 (918) 464-18-00
                 </a>
                 <a href="mailto:a9990064045@mail.ru" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Icon name="Mail" size={16} className="text-accent" />a9990064045@mail.ru

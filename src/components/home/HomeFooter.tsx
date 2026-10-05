@@ -81,8 +81,8 @@ const HomeFooter = () => {
         <div>
           <div className="font-display text-sm font-600 uppercase tracking-widest text-accent mb-4">Контакты</div>
           <div className="space-y-3 text-sm">
-            <a href="tel:+79990064045" className="flex items-center gap-2 text-white font-600 hover:text-accent transition-colors">
-              <Icon name="Phone" size={16} className="text-accent" />+7 (999) 006-40-45
+            <a href="tel:+79184641800" className="flex items-center gap-2 text-white font-600 hover:text-accent transition-colors">
+              <Icon name="Phone" size={16} className="text-accent" />+7 (918) 464-18-00
             </a>
             <a href="mailto:a9990064045@mail.ru" className="flex items-center gap-2 text-white/70 hover:text-white transition-colors">
               <Icon name="Mail" size={16} className="text-accent" />a9990064045@mail.ru
@@ -121,11 +121,11 @@ const HomeFooter = () => {
 
     {/* Floating buttons */}
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
-      <a href="https://wa.me/79990064045" target="_blank" rel="noopener noreferrer"
+      <a href="https://wa.me/79184641800" target="_blank" rel="noopener noreferrer"
         className="flex items-center gap-2 rounded-full bg-green-500 px-4 py-3 text-white shadow-xl hover:bg-green-600 transition-all hover:scale-105 font-600 text-sm">
         <Icon name="MessageCircle" size={20} /> WhatsApp
       </a>
-      <a href="https://t.me/+79990064045" target="_blank" rel="noopener noreferrer"
+      <a href="https://t.me/+79184641800" target="_blank" rel="noopener noreferrer"
         className="flex items-center gap-2 rounded-full bg-sky-500 px-4 py-3 text-white shadow-xl hover:bg-sky-600 transition-all hover:scale-105 font-600 text-sm">
         <Icon name="Send" size={20} /> Telegram
       </a>
@@ -133,7 +133,7 @@ const HomeFooter = () => {
         className="flex items-center gap-2 rounded-full bg-purple-600 px-4 py-3 text-white shadow-xl hover:bg-purple-700 transition-all hover:scale-105 font-600 text-sm">
         <Icon name="MessageSquare" size={20} /> МАКС
       </a>
-      <a href="tel:+79990064045"
+      <a href="tel:+79184641800"
         className="flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-accent-foreground shadow-xl hover:bg-accent/90 transition-all hover:scale-105 font-600 text-sm">
         <Icon name="Phone" size={20} /> Позвонить
       </a>

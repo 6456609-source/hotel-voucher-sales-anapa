@@ -62,10 +62,10 @@ const pickSeo = (slug: string, caseIn: string, phone: string) => {
 const HOME_SLUG = 'novorossiysk';
 
 const DEFAULT_CONTACTS = {
-  phone: '+7 (999) 006-40-45',
-  phoneRaw: '79990064045',
-  whatsapp: 'https://wa.me/79990064045',
-  telegram: 'https://t.me/+79990064045',
+  phone: '+7 (918) 464-18-00',
+  phoneRaw: '79184641800',
+  whatsapp: 'https://wa.me/79184641800',
+  telegram: 'https://t.me/+79184641800',
 };
 
 interface CityPageProps {
