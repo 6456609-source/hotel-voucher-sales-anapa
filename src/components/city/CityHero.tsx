@@ -65,11 +65,11 @@ const CityHero = ({ city, contacts, heroImg }: CityHeroProps) => {
         <div className="container relative py-16 md:py-24">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-3">
-              <Link to="/" className="text-white/60 hover:text-white text-sm transition-colors">Главная</Link>
-              <Icon name="ChevronRight" size={14} className="text-white/40" />
-              <span className="text-accent text-sm font-600">{city.name}</span>
+              <Link to="/" className="text-white hover:text-white/80 text-sm transition-colors">Главная</Link>
+              <Icon name="ChevronRight" size={14} className="text-white" />
+              <span className="text-white text-sm font-600">{city.name}</span>
             </div>
-            <p className="text-accent font-600 uppercase tracking-widest text-sm mb-3">Действительные чеки · {city.name}</p>
+            <p className="text-white font-600 uppercase tracking-widest text-sm mb-3">Действительные чеки · {city.name}</p>
             <h1 className="font-display text-4xl md:text-5xl font-700 uppercase text-white leading-tight">
               Гостиничные чеки<br />в {city.caseIn}
             </h1>
