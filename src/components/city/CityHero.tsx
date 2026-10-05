@@ -79,8 +79,8 @@ const CityHero = ({ city, contacts, heroImg }: CityHeroProps) => {
                 <span className="font-bold text-yellow-400 text-xl">Наша комиссия 10% от суммы чека</span>
               </div>
             </div>
-            <p className="mt-6 max-w-xl text-white/75 leading-relaxed text-lg">
-              Сотрудникам предприятий часто приходится направляться в деловые поездки. Мы поможем оформить гостиничные чеки с подтверждением для авансового отчёта о командировке в {city.caseIn}. Официально, быстро и надёжно.
+            <p className="mt-6 max-w-xl text-white font-medium leading-relaxed text-lg">
+              Сотрудникам предприятий часто приходится направляться в деловые поездки. Мы поможем оформить гостиничные чеки с подтверждением для авансового отчёта о командировке в {city.caseIn}. Официально, быстро и надёжно. QR-код.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-600" asChild>
