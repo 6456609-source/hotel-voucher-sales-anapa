@@ -59,6 +59,8 @@ const pickSeo = (slug: string, caseIn: string, phone: string) => {
   return SEO_VARIANTS[h % SEO_VARIANTS.length](caseIn, phone);
 };
 
+const HOME_SLUG = 'novorossiysk';
+
 const DEFAULT_CONTACTS = {
   phone: '+7 (999) 006-40-45',
   phoneRaw: '79990064045',
@@ -66,8 +68,14 @@ const DEFAULT_CONTACTS = {
   telegram: 'https://t.me/+79990064045',
 };
 
-const CityPage = () => {
-  const { slug } = useParams<{ slug: string }>();
+interface CityPageProps {
+  forcedSlug?: string;
+}
+
+const CityPage = ({ forcedSlug }: CityPageProps) => {
+  const params = useParams<{ slug: string }>();
+  const slug = forcedSlug || params.slug;
+  const isHome = !!forcedSlug;
   const city = getCityBySlug(slug || '');
   const override = slug ? CITY_OVERRIDES[slug] : undefined;
   const contacts = override ? { phone: override.phone, phoneRaw: override.phoneRaw, whatsapp: override.whatsapp, telegram: override.telegram } : DEFAULT_CONTACTS;
@@ -92,7 +100,28 @@ const CityPage = () => {
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
         <meta name="keywords" content={[slug && CITY_SEO[slug] ? CITY_SEO[slug].keywords : `гостиничные чеки ${city.name}, купить гостиничные чеки ${city.name}, чеки для командировки ${city.name}, авансовый отчёт ${city.name}`, ...EXTRA_KEYWORDS(city.name)].join(', ')} />
-        <link rel="canonical" href={`https://chekgarant.online/cities/${city.slug}`} />
+        <link rel="canonical" href={isHome || city.slug === HOME_SLUG ? `https://top-cheki-novorossiysk.ru/` : `https://top-cheki-novorossiysk.ru/cities/${city.slug}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="ru_RU" />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:url" content={isHome || city.slug === HOME_SLUG ? `https://top-cheki-novorossiysk.ru/` : `https://top-cheki-novorossiysk.ru/cities/${city.slug}`} />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'ЧекГарант',
+            image: HERO_IMG,
+            description: `Гостиничные чеки в ${city.caseIn} с подтверждением для авансового отчёта о командировке.`,
+            telephone: contacts.phone,
+            email: 'a9990064045@mail.ru',
+            address: { '@type': 'PostalAddress', streetAddress: city.busStation, addressLocality: city.name, addressCountry: 'RU' },
+            url: isHome || city.slug === HOME_SLUG ? `https://top-cheki-novorossiysk.ru/` : `https://top-cheki-novorossiysk.ru/cities/${city.slug}`,
+            priceRange: '₽₽',
+          })}
+        </script>
       </Helmet>
 
 
@@ -111,7 +140,7 @@ const CityPage = () => {
           <h2 className="font-display text-xl font-700 uppercase text-primary mb-5">Гостиничные чеки в других городах</h2>
           <div className="flex flex-wrap gap-2">
             {nearbyCities.map(c => (
-              <Link key={c.slug} to={`/cities/${c.slug}`} className="rounded border border-border px-3 py-1.5 text-sm text-muted-foreground hover:border-accent hover:text-primary transition-colors">
+              <Link key={c.slug} to={c.slug === HOME_SLUG ? '/' : `/cities/${c.slug}`} className="rounded border border-border px-3 py-1.5 text-sm text-muted-foreground hover:border-accent hover:text-primary transition-colors">
                 Чеки в {c.caseIn}
               </Link>
             ))}
@@ -132,11 +161,11 @@ const CityPage = () => {
 
       {/* Floating buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
-        <a href="https://wa.me/79990064045" target="_blank" rel="noopener noreferrer"
+        <a href={contacts.whatsapp} target="_blank" rel="noopener noreferrer"
           className="flex items-center gap-2 rounded-full bg-green-500 px-4 py-3 text-white shadow-xl hover:bg-green-600 transition-all hover:scale-105 font-600 text-sm">
           <Icon name="MessageCircle" size={20} /> WhatsApp
         </a>
-        <a href="https://t.me/+79990064045" target="_blank" rel="noopener noreferrer"
+        <a href={contacts.telegram} target="_blank" rel="noopener noreferrer"
           className="flex items-center gap-2 rounded-full bg-sky-500 px-4 py-3 text-white shadow-xl hover:bg-sky-600 transition-all hover:scale-105 font-600 text-sm">
           <Icon name="Send" size={20} /> Telegram
         </a>
@@ -144,7 +173,7 @@ const CityPage = () => {
           className="flex items-center gap-2 rounded-full bg-purple-600 px-4 py-3 text-white shadow-xl hover:bg-purple-700 transition-all hover:scale-105 font-600 text-sm">
           <Icon name="MessageSquare" size={20} /> МАКС
         </a>
-        <a href="tel:+79990064045"
+        <a href={`tel:+${contacts.phoneRaw}`}
           className="flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-accent-foreground shadow-xl hover:bg-accent/90 transition-all hover:scale-105 font-600 text-sm">
           <Icon name="Phone" size={20} /> Позвонить
         </a>

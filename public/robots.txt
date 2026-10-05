@@ -16,4 +16,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://chekgarant.online/sitemap.xml
+Sitemap: https://top-cheki-novorossiysk.ru/sitemap.xml
