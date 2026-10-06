@@ -68,6 +68,41 @@ const CITY_OVERRIDES: Record<string, { phone: string; phoneRaw: string; whatsapp
     telegram: 'https://t.me/+79184641800',
     heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/ed80e55a-aca3-4909-ac42-e6654e62ab0a.jpg',
   },
+  sevastopol: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/95d604f2-624c-4ec3-8633-7c1dbfe19d69.jpg',
+  },
+  simferopol: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/8490c81a-9826-4881-bad7-20d2ee6cef9c.jpg',
+  },
+  yalta: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/e5fd43f9-545f-4bc0-9628-94a28dcf214b.jpg',
+  },
+  feodosiya: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/02a16b66-44e4-428e-a645-59c19c56d195.jpg',
+  },
+  kerch: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/f034dca3-3ff6-4d2a-b913-c1ec5316e663.jpg',
+  },
 };
 
 const EXTRA_KEYWORDS = (n: string) => [

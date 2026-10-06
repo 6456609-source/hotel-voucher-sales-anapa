@@ -82,6 +82,11 @@ export const CITIES: City[] = [
   { name: 'Челябинск', slug: 'chelyabinsk', caseIn: 'Челябинске', busStation: 'г. Челябинск, ул. Автовокзальная, 9', mapQuery: 'Автовокзал+Челябинск' },
   { name: 'Элиста', slug: 'elista', caseIn: 'Элисте', busStation: 'г. Элиста, ул. Ленина, 237', mapQuery: 'Автовокзал+Элиста' },
   { name: 'Ярославль', slug: 'yaroslavl', caseIn: 'Ярославле', busStation: 'г. Ярославль, Московский пр-т, 73', mapQuery: 'Автовокзал+Ярославль' },
+  { name: 'Севастополь', slug: 'sevastopol', caseIn: 'Севастополе', busStation: 'г. Севастополь, ул. Вокзальная, 1', mapQuery: 'Автовокзал+Севастополь' },
+  { name: 'Симферополь', slug: 'simferopol', caseIn: 'Симферополе', busStation: 'г. Симферополь, ул. Киевская, 4', mapQuery: 'Автовокзал+Симферополь' },
+  { name: 'Ялта', slug: 'yalta', caseIn: 'Ялте', busStation: 'г. Ялта, ул. Московская, 1', mapQuery: 'Автовокзал+Ялта' },
+  { name: 'Феодосия', slug: 'feodosiya', caseIn: 'Феодосии', busStation: 'г. Феодосия, ул. Керченское шоссе, 1', mapQuery: 'Автовокзал+Феодосия' },
+  { name: 'Керчь', slug: 'kerch', caseIn: 'Керчи', busStation: 'г. Керчь, ул. Кирова, 1', mapQuery: 'Автовокзал+Керчь' },
 ];
 
 export const getCityBySlug = (slug: string): City | undefined =>

@@ -444,4 +444,34 @@
     <changefreq>monthly</changefreq>
     <lastmod>2026-10-06</lastmod>
   </url>
+  <url>
+    <loc>https://top-cheki-novorossiysk.ru/cities/sevastopol</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://top-cheki-novorossiysk.ru/cities/simferopol</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://top-cheki-novorossiysk.ru/cities/yalta</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://top-cheki-novorossiysk.ru/cities/feodosiya</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://top-cheki-novorossiysk.ru/cities/kerch</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-06</lastmod>
+  </url>
 </urlset>
