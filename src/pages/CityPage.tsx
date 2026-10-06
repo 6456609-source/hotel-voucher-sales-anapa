@@ -54,6 +54,20 @@ const CITY_OVERRIDES: Record<string, { phone: string; phoneRaw: string; whatsapp
     telegram: 'https://t.me/+79184641800',
     heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/95159eab-4ac9-441d-be6d-f47dfec1783d.jpg',
   },
+  'rostov-on-don': {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/a8b64fd0-e097-41a3-afe0-2e4ec1b664c2.jpg',
+  },
+  stavropol: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/ed80e55a-aca3-4909-ac42-e6654e62ab0a.jpg',
+  },
 };
 
 const EXTRA_KEYWORDS = (n: string) => [
