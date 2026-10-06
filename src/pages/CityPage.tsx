@@ -40,6 +40,20 @@ const CITY_OVERRIDES: Record<string, { phone: string; phoneRaw: string; whatsapp
     telegram: 'https://t.me/+79184641800',
     heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/1ae54c91-35f1-448d-95ef-165dd92174c9.jpg',
   },
+  gelendzhik: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/af00729f-2f78-4b65-82bd-b90fff95b1f1.jpg',
+  },
+  krasnodar: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/95159eab-4ac9-441d-be6d-f47dfec1783d.jpg',
+  },
 };
 
 const EXTRA_KEYWORDS = (n: string) => [
