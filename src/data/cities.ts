@@ -9,6 +9,7 @@ export interface City {
 export const CITIES: City[] = [
   { name: 'Абакан', slug: 'abakan', caseIn: 'Абакане', busStation: 'г. Абакан, ул. Щетинкина, 13', mapQuery: 'Автовокзал+Абакан' },
   { name: 'Азов', slug: 'azov', caseIn: 'Азове', busStation: 'г. Азов, ул. Московская, 15', mapQuery: 'Автовокзал+Азов' },
+  { name: 'Адлер', slug: 'adler', caseIn: 'Адлере', busStation: 'г. Сочи (Адлер), ул. Богдана Хмельницкого, 2', mapQuery: 'Автовокзал+Адлер' },
   { name: 'Анапа', slug: 'anapa', caseIn: 'Анапе', busStation: 'г. Анапа, Анапское шоссе, 14', mapQuery: 'Автовокзал+Анапа' },
   { name: 'Ангарск', slug: 'angarsk', caseIn: 'Ангарске', busStation: 'г. Ангарск, ул. Горького, 5', mapQuery: 'Автовокзал+Ангарск' },
   { name: 'Армавир', slug: 'armavir', caseIn: 'Армавире', busStation: 'г. Армавир, ул. Кропоткина, 173', mapQuery: 'Автовокзал+Армавир' },

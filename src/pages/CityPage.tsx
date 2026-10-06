@@ -19,6 +19,13 @@ const CITY_OVERRIDES: Record<string, { phone: string; phoneRaw: string; whatsapp
     telegram: 'https://t.me/+79184641800',
     heroImg: 'https://gorod-novoross.ru/foto/thumbs/1201.jpg',
   },
+  adler: {
+    phone: '+7 (918) 464-18-00',
+    phoneRaw: '79184641800',
+    whatsapp: 'https://wa.me/79184641800',
+    telegram: 'https://t.me/+79184641800',
+    heroImg: 'https://gorod-novoross.ru/foto/thumbs/1201.jpg',
+  },
 };
 
 const EXTRA_KEYWORDS = (n: string) => [
