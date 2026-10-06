@@ -24,7 +24,7 @@ const CITY_OVERRIDES: Record<string, { phone: string; phoneRaw: string; whatsapp
     phoneRaw: '79184641800',
     whatsapp: 'https://wa.me/79184641800',
     telegram: 'https://t.me/+79184641800',
-    heroImg: 'https://gorod-novoross.ru/foto/thumbs/1201.jpg',
+    heroImg: 'https://cdn.poehali.dev/projects/5801a4f3-870b-4b77-9d1b-c82c5628d209/files/9ec0cfab-9c91-45c0-9bb6-91156a5f8566.jpg',
   },
 };
 
